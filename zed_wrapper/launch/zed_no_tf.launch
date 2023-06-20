@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-Copyright (c) 2023, STEREOLABS.
+Copyright (c) 2020, STEREOLABS.
 
 All rights reserved.
 
@@ -18,8 +18,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <launch>
     <!-- Camera Model and Name -->
-    <arg name="camera_name"           default="zed2" /> <!-- The name you want -->
-    <arg name="camera_model"          default="zed2" /> <!-- 'zed' or 'zedm' or 'zed2' -->
+    <arg name="camera_name"           default="zed2i" /> <!-- The name you want -->
+    <arg name="camera_model"          default="zed2i" /> <!-- 'zed' or 'zedm' or 'zed2' -->
     <arg name="node_name"             default="zed_node" />
 
     <!-- Load SVO file -->
@@ -28,7 +28,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <arg name="stream"                default="" /> <!-- <arg name="stream" default="<ip_address>:<port>"> -->
 
     <!-- Base frame -->
-    <arg name="base_frame"            default="base_link" />
+    <arg name="base_frame"            default="torso_sensor_plat" />
 
     <!-- Publish ZED urdf -->
     <arg name="publish_urdf"          default="true" />
@@ -39,7 +39,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <!-- Position respect to base frame (i.e. "base_link) -->
     <arg name="cam_pos_x"             default="0.0" />
     <arg name="cam_pos_y"             default="0.0" />
-    <arg name="cam_pos_z"             default="0.0" />
+    <arg name="cam_pos_z"             default="-0.05" />
 
     <!-- Orientation respect to base frame (i.e. "base_link) -->
     <arg name="cam_roll"              default="0.0" />
